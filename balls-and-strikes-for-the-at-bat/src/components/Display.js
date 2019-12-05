@@ -7,7 +7,6 @@ export const Display = (props) => {
       <h2>At Bat</h2>
       <span>Balls: {props.ballsStateProps}</span>
       <span>Strikes: {props.strikesStateProps}</span>
-
     </div>
     </>
   );
