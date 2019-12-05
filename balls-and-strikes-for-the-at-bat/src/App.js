@@ -6,6 +6,7 @@ function App() {
   const [ballsState, setBallsState] = useState(0);
   const [strikesState, setStrikesState] = useState(0);
   const [hitState, setHitState] = useState(0);
+  const [foulState, setFoulState] = useState(0);
 
   const countRules = () => {
     //balls and strikes reset to 0 when a player reaches 3 strikes or 4 balls
@@ -19,6 +20,12 @@ function App() {
       setBallsState(0);
       setStrikesState(0);
       setHitState(0);// may need to change?
+    }
+
+    //foul balls
+    if (foulState >= 1 || strikesState < 2) {
+      setStrikesState(strikesState + 1);
+      setFoulState(0);// may need to change?
     }
   };
 
