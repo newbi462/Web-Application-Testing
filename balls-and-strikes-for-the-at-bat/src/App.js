@@ -5,12 +5,20 @@ import './App.scss';
 function App() {
   const [ballsState, setBallsState] = useState(0);
   const [strikesState, setStrikesState] = useState(0);
+  const [hitState, setHitState] = useState(0);
 
   const countRules = () => {
     //balls and strikes reset to 0 when a player reaches 3 strikes or 4 balls
     if (ballsState >= 4 || strikesState >= 3) {
       setBallsState(0);
       setStrikesState(0);
+    }
+
+    //balls and strikes reset to 0 when a hit is recorded
+    if (hitState >= 1) {
+      setBallsState(0);
+      setStrikesState(0);
+      setHitState(0);// may need to change?
     }
   };
 
