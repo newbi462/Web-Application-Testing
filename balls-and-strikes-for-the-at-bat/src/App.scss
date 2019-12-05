@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+//at-bat
+.at-bat, .inning {
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+  span {
+    border: solid 3px #61dafb;
+    padding: 13px;
+  }
+}

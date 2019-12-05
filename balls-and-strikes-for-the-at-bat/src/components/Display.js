@@ -5,8 +5,8 @@ export const Display = (props) => {
     <>
     <div className="at-bat">
       <h2>At Bat</h2>
-      <span>Balls: {props.ballsStateProps}</span>
-      <span>Strikes: {props.strikesStateProps}</span>
+      <span data-testid="balls-info">Balls: {props.ballsStateProps}</span>
+      <span data-testid="strick-info">Strikes: {props.strikesStateProps}</span>
     </div>
     </>
   );

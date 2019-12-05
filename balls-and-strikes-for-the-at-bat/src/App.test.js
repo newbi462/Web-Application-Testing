@@ -7,3 +7,13 @@ test('renders learn react link', () => {
   const linkElement = getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+test('There is a Balls Count for At-Bat', () => {
+  const { getByTestId } = render(<App />);
+  getByTestId(/balls-info/i);
+});
+
+test('There is a Strike Count for At-Bat', () => {
+  const { getByTestId } = render(<App />);
+  getByTestId(/strick-info/i);
+});
