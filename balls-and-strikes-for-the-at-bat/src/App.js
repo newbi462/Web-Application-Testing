@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 
+import { Display } from './components/Display'
+
 function App() {
   const [ballsState, setBallsState] = useState(0);
   const [strikesState, setStrikesState] = useState(0);
@@ -32,6 +34,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+
+        <Display ballsStateProps={ballsState} strikesStateProps={strikesState} />
+
+
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
