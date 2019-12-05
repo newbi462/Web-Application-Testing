@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 
 function App() {
+  const [ballsState, setBallsState] = useState(0);
+  const [strikesState, setStrikesState] = useState(0);
+
+  const countRules = () => {
+    //balls and strikes reset to 0 when a player reaches 3 strikes or 4 balls
+    if (ballsState >= 4 || strikesState >= 3) {
+      setBallsState(0);
+      setStrikesState(0);
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
